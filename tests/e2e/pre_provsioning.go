@@ -89,7 +89,7 @@ var _ = Describe("[ebs-csi-e2e] [single-az] Pre-Provisioned", func() {
 		if err != nil {
 			Fail(fmt.Sprintf("could not get NewCloud: %v", err))
 		}
-		disk, err := cloud.CreateDisk(context.Background(), "", diskOptions)
+		disk, err := cloud.CreateDisk(context.Background(), "pvc-test1", diskOptions)
 		if err != nil {
 			Fail(fmt.Sprintf("could not provision a volume: %v", err))
 		}
